@@ -2,12 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class KillZone : MonoBehaviour
+public class ZoneOut : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Time.timeScale = 0;
-        Debug.Log("Вы погибли");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+0);
     }
 }

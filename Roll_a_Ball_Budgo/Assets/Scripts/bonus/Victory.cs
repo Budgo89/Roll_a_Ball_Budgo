@@ -10,7 +10,6 @@ public class Victory : MonoBehaviour
     public void VicroryСheck()
     {
         vicrory--;
-        Debug.Log(vicrory);
         if (vicrory == 0)
         {
             exitPoint.SetActive(true);
