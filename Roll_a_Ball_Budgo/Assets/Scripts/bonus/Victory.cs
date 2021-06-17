@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Victory : MonoBehaviour
 {
-    [SerializeField] private int vicrory = 3;
+    [SerializeField] private int pointsForVictory = 3;
     [SerializeField] private GameObject exitPoint;
 
-    public void VicroryСheck()
+    public void VictoryСheck()
     {
-        vicrory--;
-        if (vicrory == 0)
+        pointsForVictory--;
+        if (pointsForVictory == 0)
         {
             exitPoint.SetActive(true);
         }

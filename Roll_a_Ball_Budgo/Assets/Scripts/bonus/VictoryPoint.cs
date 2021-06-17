@@ -7,11 +7,18 @@ public class VictoryPoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        var enemu = other.GetComponent<Victory>();
-        var cam = other.GetComponent<CanvasPoint>();
-        enemu.VicroryСheck();
-        cam.ImagePoint();
-        gameObject.SetActive(false);
-    }
+        try
+        {
+            var enemu = other.GetComponent<Victory>();
+            var cam = other.GetComponent<CanvasPoint>();
+            enemu.VictoryСheck();
+            cam.ImagePoint();
+            gameObject.SetActive(false);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("GetComponent отсутствуеть на объёекте");
+        }
 
+    }
 }

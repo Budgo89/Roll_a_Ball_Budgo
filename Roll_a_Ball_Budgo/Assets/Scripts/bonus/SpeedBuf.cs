@@ -11,7 +11,7 @@ public class SpeedBuf : Bonus
     {
         if (_bufOn == false)
         {
-            speedBuf();
+            SpeedBuf();
             TimeBuf(_slider);
         }
 

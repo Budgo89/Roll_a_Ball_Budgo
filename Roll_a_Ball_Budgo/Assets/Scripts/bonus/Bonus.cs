@@ -6,8 +6,8 @@ using UnityStandardAssets.Vehicles.Ball;
 
 public class Bonus : MonoBehaviour
 {
-    [SerializeField] protected float speed = 10f;
-    [SerializeField] protected float jamp = 2f;
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float jamp = 2f;
     [SerializeField] private float time = 5f;
     [SerializeField] private GameObject ball;
     
@@ -22,7 +22,7 @@ public class Bonus : MonoBehaviour
         _speedBes = _ball.m_MovePower;
     }
 
-    protected void speedBuf()
+    protected void SpeedBuf()
     {
         if (_bufOn == false)
         {
