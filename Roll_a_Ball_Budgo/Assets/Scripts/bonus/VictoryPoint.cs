@@ -15,7 +15,7 @@ public class VictoryPoint : MonoBehaviour
             cam.ImagePoint();
             gameObject.SetActive(false);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Debug.Log("GetComponent отсутствуеть на объёекте");
         }
