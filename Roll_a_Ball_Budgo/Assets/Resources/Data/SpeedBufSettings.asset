@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85e089251228f5f4eabd9be9c67703c4, type: 3}
+  m_Name: SpeedBufSettings
+  m_EditorClassIdentifier: 
+  _speedBufInfo:
+  - speedBufPrefab: {fileID: 3492508552665135105, guid: e7d3607a24fe63b4980ede749c002b5b,
+      type: 3}
+    _position: {x: 4, y: 6, z: 11}
+  - speedBufPrefab: {fileID: 6861943667332165457, guid: c50a9ed71c9179d4fb15fb50b75dae53,
+      type: 3}
+    _position: {x: -3, y: 6, z: -9}
