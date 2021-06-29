@@ -15,6 +15,7 @@ public class SpeedBufInitialization : IInitialization
             _speedBuf = _speedBufFactory.CreateSpeedBuf(i);
         }
 
+        _speedBuf.FalseSlider();
     }
     public void Initialization()
     {

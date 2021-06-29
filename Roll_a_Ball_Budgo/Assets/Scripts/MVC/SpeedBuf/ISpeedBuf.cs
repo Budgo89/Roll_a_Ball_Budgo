@@ -6,4 +6,5 @@ using UnityEngine;
 public interface ISpeedBuf
 {
     event Action<int> OnTriggerEnterChange;
+    void FalseSlider();
 }

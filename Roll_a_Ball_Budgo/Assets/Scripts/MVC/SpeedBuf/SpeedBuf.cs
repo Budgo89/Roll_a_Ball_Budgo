@@ -22,14 +22,16 @@ public class SpeedBuf : MonoBehaviour, ISpeedBuf
     
     private void Awake()
     {
-        // Это временные заглушки
         _ball = GameObject.Find("RollerBall").GetComponent<Ball>();
-        _sliderBuf = GameObject.Find("/Canvas/Slider Speed Buf").GetComponent<Slider>();
+        _speedBes = _ball.m_MovePower;
         _sliderDeBuf = GameObject.Find("/Canvas/Slider Speed DeBuf").GetComponent<Slider>();
-        
+        _sliderBuf = GameObject.Find("/Canvas/Slider Speed Buf").GetComponent<Slider>();
+    }
+
+    public void FalseSlider()
+    {
         _sliderBuf.gameObject.SetActive(false);
         _sliderDeBuf.gameObject.SetActive(false);
-        _speedBes = _ball.m_MovePower;
     }
     
     private void SpeedBufMVS()

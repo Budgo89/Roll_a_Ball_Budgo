@@ -23,5 +23,4 @@ public class SpeedBufFactory : ISpeedBufFactory
         return _speedBufData.SpeedBufCount();
     }
 
-
 }
