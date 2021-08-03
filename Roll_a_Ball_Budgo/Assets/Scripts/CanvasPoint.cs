@@ -4,19 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CanvasPoint : MonoBehaviour
+public class CanvasPoint /*: MonoBehaviour*/
 {
-    [SerializeField] private Image[] points;
+    private GameObject[] _points;
     private int _point;
 
-    private void Awake()
+    public CanvasPoint(GameObject[] points)
     {
-        _point = points.Length-1;
+        _points = points;
+        _point = _points.Length-1;
     }
 
     public void ImagePoint()
     {
-        points[_point].gameObject.SetActive(false);
+        _points[_point].gameObject.SetActive(false);
         _point--;
     }
     

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Assets.Scripts.MVC.Canvass;
+using Assets.Scripts.MVC.Data;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,22 +12,21 @@ public class SpeedBuf : MonoBehaviour, ISpeedBuf
     public event Action<int>  OnTriggerEnterChange;
     [SerializeField] private float speed = 10f;
     [SerializeField] private float time = 5f;
-    private GameObject ball;
     
     private Ball _ball;
-    private float _speedBes;
+    private float _speedBas;
     private float _timer;
     protected bool _bufOn = false;
     private Slider _slider;
     private Slider _sliderBuf;
     private Slider _sliderDeBuf;
-    
-    private void Awake()
+
+    public void LinkToSliderBuf(Slider sliderBuf, Slider sliderDeBuf, GameObject ball)
     {
-        _ball = GameObject.Find("RollerBall").GetComponent<Ball>();
-        _speedBes = _ball.m_MovePower;
-        _sliderDeBuf = GameObject.Find("/Canvas/Slider Speed DeBuf").GetComponent<Slider>();
-        _sliderBuf = GameObject.Find("/Canvas/Slider Speed Buf").GetComponent<Slider>();
+        _sliderBuf = sliderBuf;
+        _sliderDeBuf = sliderDeBuf;
+        _ball = ball.GetComponent<Ball>();
+        _speedBas = _ball.m_MovePower;
     }
 
     public void FalseSlider()
@@ -49,7 +50,7 @@ public class SpeedBuf : MonoBehaviour, ISpeedBuf
     private IEnumerator SpeedBufRoutine()
     {
         yield return new WaitForSeconds(time);
-        _ball.m_MovePower = _speedBes;
+        _ball.m_MovePower = _speedBas;
         gameObject.SetActive(false);
         _bufOn = false;
     }
@@ -81,5 +82,5 @@ public class SpeedBuf : MonoBehaviour, ISpeedBuf
             TimeBuf();
         }
     }
-    
+
 }

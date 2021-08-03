@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20343cd67db00440a988952109aadf2, type: 3}
+  m_Name: CanvasSettings
+  m_EditorClassIdentifier: 
+  _canvasInfo:
+  - CanvasPrefab: {fileID: 2509666563676807075, guid: 6cc6aa226b9e3744cabc91cdf051fe8b,
+      type: 3}
+    teg: 1
+    positions: {x: 0, y: 0, z: 0}
+  - CanvasPrefab: {fileID: 4966064119776993120, guid: f7152e62d60085f4dbcecd7cd721521a,
+      type: 3}
+    teg: SpeedBufSlider
+    positions: {x: 0, y: -130, z: 0}
+  - CanvasPrefab: {fileID: 7755493074658289157, guid: e88aa82be2219644e955ebbb83be70f7,
+      type: 3}
+    teg: SpeedDeBufSlider
+    positions: {x: 0, y: -130, z: 0}
+  - CanvasPrefab: {fileID: 5580337312394088088, guid: 1578d03f0de632048933503f0e86c92d,
+      type: 3}
+    teg: JampBufSlider
+    positions: {x: 0, y: -153, z: 0}
+  - CanvasPrefab: {fileID: 3074156564729873521, guid: b3f06695ec494da41bb022c03878f643,
+      type: 3}
+    teg: Text
+    positions: {x: 0, y: -14, z: 0}
+  - CanvasPrefab: {fileID: 2127161648758516695, guid: 0f6a2f135ae1b12428cbdf3b30ee50e1,
+      type: 3}
+    teg: PointExit
+    positions: {x: 95, y: -73, z: 0}
+  - CanvasPrefab: {fileID: 8429409254545701563, guid: a9382416e5d837e4b907ae71ac473a97,
+      type: 3}
+    teg: Point1
+    positions: {x: 155, y: -73, z: 0}
+  - CanvasPrefab: {fileID: 5550421494788755599, guid: c21f5e968dd609444823c5931a1df8ba,
+      type: 3}
+    teg: Point2
+    positions: {x: 215, y: -73, z: 0}
+  - CanvasPrefab: {fileID: 1657568418562703315, guid: aade45aba141ea2409170e6e20f0ff39,
+      type: 3}
+    teg: Point3
+    positions: {x: 275, y: -73, z: 0}

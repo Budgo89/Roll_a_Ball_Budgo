@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _jampDataPath: JampBufSettings
   _speedDataPath: SpeedBufSettings
+  _controlPointsDataPath: ControlPointsSettings
+  _locationDataPath: LocationSettings
+  _canvasDataPath: CanvasSettings
+  _rollerBallPath: RollerBallSettings
+  _exitPointPath: ExitPointSettings

@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Victory : MonoBehaviour
+public class Victory
 {
-    [SerializeField] private int pointsForVictory = 3;
-    [SerializeField] private GameObject exitPoint;
+    private int _pointsForVictory;
+    private GameObject _exitPoint;
+
+    public Victory(GameObject exitPoint, int pointsForVictory)
+    {
+        _exitPoint = exitPoint;
+        _pointsForVictory = pointsForVictory;
+    }
 
     public void VictoryСheck()
     {
-        pointsForVictory--;
-        if (pointsForVictory == 0)
+        _pointsForVictory--;
+        if (_pointsForVictory == 0)
         {
-            exitPoint.SetActive(true);
+            _exitPoint.SetActive(true);
         }
     }
 }

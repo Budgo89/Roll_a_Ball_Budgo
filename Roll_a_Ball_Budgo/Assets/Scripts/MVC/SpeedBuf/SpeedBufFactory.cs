@@ -1,14 +1,17 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.MVC.Canvass;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpeedBufFactory : ISpeedBufFactory
 {
     private readonly SpeedBufData _speedBufData;
+    
 
     public SpeedBufFactory(SpeedBufData speedBufData)
     {
         _speedBufData = speedBufData;
+        
     }
 
     public ISpeedBuf CreateSpeedBuf(int i)

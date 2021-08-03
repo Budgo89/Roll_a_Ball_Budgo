@@ -16,12 +16,11 @@ public class JampBuf : MonoBehaviour, IJampBuf
     private bool _bufOn = false;
     private Slider _slider;
 
-    private void Awake()
+    public void LinkToSlider(Slider slider, GameObject ball)
     {
-        // Это временные заглушки
-        _ball = GameObject.Find("RollerBall").GetComponent<Ball>();
-        _slider = GameObject.Find("/Canvas/Slider Jamp Buf").GetComponent<Slider>();
+        _slider = slider;
         _slider.gameObject.SetActive(false);
+        _ball = ball.GetComponent<Ball>();
     }
 
     private void JampBufMVS()
