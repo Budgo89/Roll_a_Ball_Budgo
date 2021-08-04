@@ -4,6 +4,6 @@ namespace Assets.Scripts.MVC.RollerBalls
 {
     public interface IRollerBallFactory
     {
-        GameObject CreateRollerBall();
+        RollerBall CreateRollerBall();
     }
 }

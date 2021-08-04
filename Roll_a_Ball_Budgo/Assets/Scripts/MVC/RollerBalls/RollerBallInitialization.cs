@@ -11,7 +11,7 @@ namespace Assets.Scripts.MVC.RollerBalls
     {
 
         private readonly IRollerBallFactory _rollerBallFactory;
-        public GameObject _rollerBall;
+        public RollerBall _rollerBall;
 
         public RollerBallInitialization(IRollerBallFactory rollerBallFactory) 
         {

@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.MVC.Canvass;
+using Assets.Scripts.MVC.RollerBalls;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ public class SpeedBufInitialization : IInitialization
     private readonly ISpeedBufFactory _speedBufFactory;
     private ISpeedBuf _speedBuf;
     private CanvasManager _canvasManager;
-    private GameObject _player;
+    private RollerBall _player;
 
-    public SpeedBufInitialization(ISpeedBufFactory speedBufFactory, CanvasManager canvasManager, GameObject player)
+    public SpeedBufInitialization(ISpeedBufFactory speedBufFactory, CanvasManager canvasManager, RollerBall player)
     {
         _speedBufFactory = speedBufFactory;
         _canvasManager = canvasManager;

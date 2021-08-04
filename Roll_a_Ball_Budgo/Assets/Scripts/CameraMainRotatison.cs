@@ -6,15 +6,14 @@ using UnityEngine;
 
 public class CameraMainRotatison : IExecute
 {
-    private GameObject _player;
-    private GameObject _mainCamera;
+    private RollerBall _player;
+    private Camera _mainCamera;
     private Vector3 _offset;
 
-    public CameraMainRotatison(GameObject player, Camera mainCamera)
+    public CameraMainRotatison(RollerBall player, Camera mainCamera)
     {
         _player = player;
-        _mainCamera = mainCamera.gameObject;
-        //_mainCamera.transform.LookAt(_player.transform);
+        _mainCamera = mainCamera;
         _offset = _mainCamera.transform.position - _player.transform.position;
     }
 

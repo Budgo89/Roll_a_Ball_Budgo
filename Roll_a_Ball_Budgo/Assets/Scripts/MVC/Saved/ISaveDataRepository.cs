@@ -1,8 +1,10 @@
-﻿namespace Assets.Scripts.MVC.Saved
+﻿using Assets.Scripts.MVC.RollerBalls;
+
+namespace Assets.Scripts.MVC.Saved
 {
     public interface ISaveDataRepository
     {
-        void Save(PlayerBase player);
-        void Load(PlayerBase player);
+        void Save(RollerBall player);
+        void Load(RollerBall player);
     }
 }

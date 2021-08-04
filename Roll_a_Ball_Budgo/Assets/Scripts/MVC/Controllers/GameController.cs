@@ -1,7 +1,10 @@
-﻿using Assets.Scripts.MVC.Canvass;
+﻿using Assets.Scripts.MVC;
+using Assets.Scripts.MVC.Canvass;
+using Assets.Scripts.MVC.Controllers;
 using Assets.Scripts.MVC.ControlPoint;
 using Assets.Scripts.MVC.ExitPoints;
 using Assets.Scripts.MVC.RollerBalls;
+using Assets.Scripts.MVC.Saved;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,14 +12,19 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     [SerializeField] private Data _data;
+    [SerializeField] private InputData _inputData;
     private Controllers _controllers;
     private CameraMainRotatison _cameraMainRotatison;
     private CanvasManager _canvasManager;
+    private ListExecuteObject _interactiveObject;
+    private InputController _inputController;
+    private Reference _reference;
 
     private void Start()
     {
         _canvasManager = new CanvasManager();
         _controllers = new Controllers();
+        _interactiveObject = new ListExecuteObject();
         new GameInitialization(_controllers, _data, _canvasManager);
         var exitPointFactory = new ExitPointFactory(_data.ExitPoint);
         var rollerBallFactory = new RollerBallFactory(_data.RollerBall);
@@ -38,6 +46,13 @@ public class GameController : MonoBehaviour
         _controllers.Add(jampBufInitialization);
         _controllers.Initialization();
 
+        _reference = new Reference();
+
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+        {
+            _inputController = new InputController(rollerBallInitialization._rollerBall, _inputData);
+            _interactiveObject.AddExecuteObject(_inputController);
+        }
     }
 
     private void Update()
@@ -45,6 +60,17 @@ public class GameController : MonoBehaviour
         var deltaTime = Time.deltaTime;
         _controllers.Execute(deltaTime);
         _cameraMainRotatison.Execute(deltaTime);
+
+        for (var i = 0; i < _interactiveObject.Length; i++)
+        {
+            var interactiveObject = _interactiveObject[i];
+
+            if (interactiveObject == null)
+            {
+                continue;
+            }
+            interactiveObject.Execute(deltaTime);
+        }
     }
 
     private void LateUpdate()

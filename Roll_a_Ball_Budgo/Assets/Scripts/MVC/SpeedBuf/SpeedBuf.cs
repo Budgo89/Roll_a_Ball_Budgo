@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.MVC.Canvass;
 using Assets.Scripts.MVC.Data;
+using Assets.Scripts.MVC.RollerBalls;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +22,7 @@ public class SpeedBuf : MonoBehaviour, ISpeedBuf
     private Slider _sliderBuf;
     private Slider _sliderDeBuf;
 
-    public void LinkToSliderBuf(Slider sliderBuf, Slider sliderDeBuf, GameObject ball)
+    public void LinkToSliderBuf(Slider sliderBuf, Slider sliderDeBuf, RollerBall ball)
     {
         _sliderBuf = sliderBuf;
         _sliderDeBuf = sliderDeBuf;

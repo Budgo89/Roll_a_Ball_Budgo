@@ -16,11 +16,11 @@ namespace Assets.Scripts.MVC.RollerBalls
             _rollerBallData = rollerBallData;
         }
 
-        public GameObject CreateRollerBall()
+        public RollerBall CreateRollerBall()
         {
             var rollerBall = _rollerBallData.GetRollerBall();
             var rollerBallPosition = _rollerBallData.GetRollerBallPosition();
-            return GameObject.Instantiate(rollerBall,rollerBallPosition,Quaternion.identity).gameObject;
+            return Object.Instantiate(rollerBall,rollerBallPosition,Quaternion.identity);
         }
     }
 }

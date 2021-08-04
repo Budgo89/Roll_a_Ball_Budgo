@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.MVC.RollerBalls;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class JampBuf : MonoBehaviour, IJampBuf
     private bool _bufOn = false;
     private Slider _slider;
 
-    public void LinkToSlider(Slider slider, GameObject ball)
+    public void LinkToSlider(Slider slider, RollerBall ball)
     {
         _slider = slider;
         _slider.gameObject.SetActive(false);

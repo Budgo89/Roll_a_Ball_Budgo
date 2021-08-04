@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using Assets.Scripts.MVC.RollerBalls;
+using System.Data;
 using System.IO;
 using UnityEngine;
 
@@ -25,7 +26,7 @@ namespace Assets.Scripts.MVC.Saved
             _path = Path.Combine(Application.dataPath, _folderName);
         }
 
-        public void Save(PlayerBase player)
+        public void Save(RollerBall player)
         {
             if (!Directory.Exists(Path.Combine(_path)))
             {
@@ -42,7 +43,7 @@ namespace Assets.Scripts.MVC.Saved
             Debug.Log("Save");
         }
 
-        public void Load(PlayerBase player)
+        public void Load(RollerBall player)
         {
             var file = Path.Combine(_path, _fileName);
             if (!File.Exists(file))

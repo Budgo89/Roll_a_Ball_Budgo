@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.MVC.Canvass;
+using Assets.Scripts.MVC.RollerBalls;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ internal sealed class JampBufInitialization : IInitialization
     private readonly IJampBufFactory _jampBufFactory;
     private IJampBuf _jampBuf;
     private CanvasManager _canvasManager;
-    private GameObject _player;
+    private RollerBall _player;
 
-    public JampBufInitialization(IJampBufFactory jampBufFactory, CanvasManager canvasManager, GameObject player)
+    public JampBufInitialization(IJampBufFactory jampBufFactory, CanvasManager canvasManager, RollerBall player)
     {
         _jampBufFactory = jampBufFactory;
         _canvasManager = canvasManager;
