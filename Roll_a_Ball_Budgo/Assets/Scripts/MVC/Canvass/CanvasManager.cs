@@ -8,7 +8,6 @@ namespace Assets.Scripts.MVC.Canvass
 {
     public class CanvasManager
     {
-        //public List<ICanvasInterface> canvasManager { get; set; }
         public List<CanvasModel> canvasManager = new List<CanvasModel>();
     }
 }

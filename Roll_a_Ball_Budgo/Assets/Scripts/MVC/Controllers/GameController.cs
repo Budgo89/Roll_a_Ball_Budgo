@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour
         _controllers.Add(rollerBallInitialization);
         _controllers.Add(jampBufInitialization);
         _controllers.Initialization();
+        var restart = new RestartButton(_canvasManager);
 
         _reference = new Reference();
 

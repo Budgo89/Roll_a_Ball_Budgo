@@ -49,3 +49,7 @@ MonoBehaviour:
       type: 3}
     teg: Point3
     positions: {x: 275, y: -73, z: 0}
+  - CanvasPrefab: {fileID: -8119179677754901925, guid: c13d40d17d4409f4597bca66abe04d15,
+      type: 3}
+    teg: Restart
+    positions: {x: -92, y: 35, z: 0}
