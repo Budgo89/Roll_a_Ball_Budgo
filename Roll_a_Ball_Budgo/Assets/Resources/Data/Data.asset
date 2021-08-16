@@ -19,3 +19,4 @@ MonoBehaviour:
   _canvasDataPath: CanvasSettings
   _rollerBallPath: RollerBallSettings
   _exitPointPath: ExitPointSettings
+  _zoneOutPath: ZoneOutSettings

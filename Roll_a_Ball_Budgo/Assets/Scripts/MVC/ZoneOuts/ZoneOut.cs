@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ZoneOut : MonoBehaviour
+public class ZoneOut : MonoBehaviour, IZoneOut
 {
     private void OnTriggerEnter(Collider other)
     {

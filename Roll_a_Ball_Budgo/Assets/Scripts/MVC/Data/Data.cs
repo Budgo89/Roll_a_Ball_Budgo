@@ -15,6 +15,7 @@ public class Data : ScriptableObject
     [SerializeField] private string _canvasDataPath;
     [SerializeField] private string _rollerBallPath;
     [SerializeField] private string _exitPointPath;
+    [SerializeField] private string _zoneOutPath;
 
     private JampBufData _jampBuf;
     private SpeedBufData _speedBuf;
@@ -24,6 +25,7 @@ public class Data : ScriptableObject
     private RollerBallData _rollerBall;
     private Camera _mainCamera;
     private ExitPointData _exitPoint;
+    private ZoneOutData _zoneOut;
 
     public JampBufData JampBuf
     {
@@ -117,6 +119,18 @@ public class Data : ScriptableObject
                 _exitPoint = Load<ExitPointData>("Data/" + _exitPointPath);
             }
             return _exitPoint;
+        }
+    }
+
+    public ZoneOutData ZoneOut
+    {
+        get
+        {
+            if (_zoneOut == null)
+            {
+                _zoneOut = Load<ZoneOutData>("Data/" + _zoneOutPath);
+            }
+            return _zoneOut;
         }
     }
 

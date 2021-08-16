@@ -23,3 +23,4 @@ namespace Assets.Scripts.MVC.Locations
         }
     }
 }
+
