@@ -1,6 +1,4 @@
 ﻿using Assets.Scripts.MVC.Data;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -16,6 +14,8 @@ public class Data : ScriptableObject
     [SerializeField] private string _rollerBallPath;
     [SerializeField] private string _exitPointPath;
     [SerializeField] private string _zoneOutPath;
+    [SerializeField] private string _miniMapCanvasPath;
+    [SerializeField] private string _miniMapCameraPath;
 
     private JampBufData _jampBuf;
     private SpeedBufData _speedBuf;
@@ -26,6 +26,8 @@ public class Data : ScriptableObject
     private Camera _mainCamera;
     private ExitPointData _exitPoint;
     private ZoneOutData _zoneOut;
+    private MiniMapCanvasData _miniMapCanvas;
+    private MiniMapCameraData _miniMapCamera;
 
     public JampBufData JampBuf
     {
@@ -131,6 +133,30 @@ public class Data : ScriptableObject
                 _zoneOut = Load<ZoneOutData>("Data/" + _zoneOutPath);
             }
             return _zoneOut;
+        }
+    }
+
+    public MiniMapCanvasData MiniMapCanvas
+    {
+        get
+        {
+            if(_miniMapCanvas == null)
+            {
+                _miniMapCanvas = Load<MiniMapCanvasData>("Data/" + _miniMapCanvasPath);
+            }
+            return _miniMapCanvas;
+        }
+    }
+
+    public MiniMapCameraData MiniMapCamera
+    {
+        get
+        {
+            if(_miniMapCamera == null)
+            {
+                _miniMapCamera = Load<MiniMapCameraData>("Data/" + _miniMapCameraPath);
+            }
+            return _miniMapCamera;
         }
     }
 

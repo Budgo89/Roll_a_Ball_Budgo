@@ -3,6 +3,7 @@ using Assets.Scripts.MVC.Canvass;
 using Assets.Scripts.MVC.Controllers;
 using Assets.Scripts.MVC.ControlPoint;
 using Assets.Scripts.MVC.ExitPoints;
+using Assets.Scripts.MVC.MiniMapsCamera;
 using Assets.Scripts.MVC.RollerBalls;
 using Assets.Scripts.MVC.Saved;
 using System.Collections;
@@ -32,19 +33,24 @@ public class GameController : MonoBehaviour
         var rollerBallInitialization = new RollerBallInitialization(rollerBallFactory);
         var controlPointsFactory = new ControlPointsFactory(_data.ControlPoints);
         var jampBufFactory = new JampBufFactory(_data.JampBuf);
+        var miniMapCameraFactory = new MiniMapCameraFactory(_data.MiniMapCamera);
         _cameraMainRotatison = new CameraMainRotatison(rollerBallInitialization._rollerBall, _data.MainCamera);
         var speedBufInitialization = new SpeedBufInitialization(speedBufFactory, _canvasManager, rollerBallInitialization._rollerBall);
         var jampBufInitialization = new JampBufInitialization(jampBufFactory, _canvasManager, rollerBallInitialization._rollerBall);
-        _controllers.Add(speedBufInitialization);
-        
+        _controllers.Add(speedBufInitialization);        
         var exitPointInitialization = new ExitPointInitialization(exitPointFactory, _canvasManager);        
         _controllers.Add(exitPointInitialization);
         var victory = new Victory(exitPointInitialization._exitPoint, 3);
         var controlPointsInitialization = new ControlPointsInitialization(controlPointsFactory, victory, _canvasManager);
+        var miniMapCameraInitialization = new MiniMapCameraInitialization(miniMapCameraFactory);
         _controllers.Add(controlPointsInitialization);
         _controllers.Add(rollerBallInitialization);
         _controllers.Add(jampBufInitialization);
+        _controllers.Add(miniMapCameraInitialization);
+        var miniMap = new MiniMap(rollerBallInitialization._rollerBall, miniMapCameraInitialization._miniMapCamera);
+        _controllers.Add(miniMap);
         _controllers.Initialization();
+
         var restart = new RestartButton(_canvasManager);
 
         _reference = new Reference();

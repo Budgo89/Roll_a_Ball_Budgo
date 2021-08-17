@@ -20,3 +20,5 @@ MonoBehaviour:
   _rollerBallPath: RollerBallSettings
   _exitPointPath: ExitPointSettings
   _zoneOutPath: ZoneOutSettings
+  _miniMapCanvasPath: MiniMapCanvasSettings
+  _miniMapCameraPath: MiniMapCameraSettings

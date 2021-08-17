@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dce35994e46acf94dbdd34d144f283ab, type: 3}
-  m_Name: ZoneOutSettings
+  m_Script: {fileID: 11500000, guid: d7b77b52fa3fd2549a52ea0fffeecb77, type: 3}
+  m_Name: MiniMapCanvasSettings
   m_EditorClassIdentifier: 
-  _zoneOutInfo:
-  - zoneOutPrefab: {fileID: 5940050571533198426, guid: e75ee2ec2b5757749bc6156cf731e983,
+  _miniMapCanvasInfos:
+  - miniMapCanvasPrefab: {fileID: -7594664561725319248, guid: 309ade0d3ef81b74f90cd9855f2a2ffd,
       type: 3}
     _position: {x: 0, y: 0, z: 0}
