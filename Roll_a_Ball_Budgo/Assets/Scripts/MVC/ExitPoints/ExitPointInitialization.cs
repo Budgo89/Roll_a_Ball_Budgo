@@ -1,9 +1,5 @@
 ﻿using Assets.Scripts.MVC.Canvass;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,9 +17,6 @@ namespace Assets.Scripts.MVC.ExitPoints
             _canvasManager = canvasManager;
             _exitPoint = _exitPointFactory.CreateExitPoint();
             _exitPoint.GetComponent<ExitPoint>().LinkToText(SearchInCanvas("Text").GetComponent<Text>());
-            //var victory = new Victory(_exitPoint, 3);
-
-
         }
 
         public void Initialization()

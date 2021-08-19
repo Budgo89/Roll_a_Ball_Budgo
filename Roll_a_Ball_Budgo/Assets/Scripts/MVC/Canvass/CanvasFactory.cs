@@ -7,8 +7,7 @@ namespace Assets.Scripts.MVC.Canvass
     public class CanvasFactory : ICanvasFactory
     {
         private readonly CanvasData _canvasData;
-        private Transform _parent;
-        
+        private Transform _parent;        
 
         public CanvasFactory(CanvasData canvasData)
         {
@@ -42,7 +41,5 @@ namespace Assets.Scripts.MVC.Canvass
         {
             return _canvasData.GetCanvatTeg(i);
         }
-
-
     }
 }

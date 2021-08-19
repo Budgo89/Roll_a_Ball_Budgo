@@ -1,13 +1,10 @@
 ﻿using Assets.Scripts.MVC.MiniMapsCamera;
 using Assets.Scripts.MVC.RollerBalls;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MiniMap : ILateExecute
 {
     private Transform _player;
-    //private GameObject _player;
     private Transform _miniMapCamera;
     public MiniMap(RollerBall player, MiniMapCamera miniMapCamera)
     {
@@ -30,13 +27,4 @@ public class MiniMap : ILateExecute
         _miniMapCamera.transform.position = newPosition;
         _miniMapCamera.transform.rotation = Quaternion.Euler(90, _player.eulerAngles.y, 0);
     }
-
-    private void LateUpdate()
-    {
-        var newPosition = _player.position;
-        newPosition.y = _miniMapCamera.transform.position.y;
-        _miniMapCamera.transform.position = newPosition;
-        _miniMapCamera.transform.rotation = Quaternion.Euler(90, _player.eulerAngles.y, 0);
-    }
-    
 }

@@ -5,9 +5,6 @@ using Assets.Scripts.MVC.ControlPoint;
 using Assets.Scripts.MVC.ExitPoints;
 using Assets.Scripts.MVC.MiniMapsCamera;
 using Assets.Scripts.MVC.RollerBalls;
-using Assets.Scripts.MVC.Saved;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -19,7 +16,6 @@ public class GameController : MonoBehaviour
     private CanvasManager _canvasManager;
     private ListExecuteObject _interactiveObject;
     private InputController _inputController;
-    private Reference _reference;
 
     private void Start()
     {
@@ -53,7 +49,6 @@ public class GameController : MonoBehaviour
 
         var restart = new RestartButton(_canvasManager);
 
-        _reference = new Reference();
 
         if (Application.platform == RuntimePlatform.WindowsEditor)
         {

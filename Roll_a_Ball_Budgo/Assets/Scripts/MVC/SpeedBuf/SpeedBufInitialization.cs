@@ -1,8 +1,6 @@
 ﻿using Assets.Scripts.MVC.Canvass;
 using Assets.Scripts.MVC.RollerBalls;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,9 +23,11 @@ public class SpeedBufInitialization : IInitialization
         }        
         _speedBuf.FalseSlider();
     }
+
     public void Initialization()
     {
     }
+
     private GameObject SearchInCanvas(string teg)
     {
         for (int i = 0; i < _canvasManager.canvasManager.Count; i++)

@@ -78,6 +78,7 @@ public class Data : ScriptableObject
             return _location;
         }
     }
+
     public CanvasData Canvas
     {
         get
@@ -89,6 +90,7 @@ public class Data : ScriptableObject
             return _canvas;
         }
     }
+
     public RollerBallData RollerBall
     {
         get
@@ -100,6 +102,7 @@ public class Data : ScriptableObject
             return _rollerBall;
         }
     }
+
     public Camera MainCamera
     {
         get
@@ -160,8 +163,7 @@ public class Data : ScriptableObject
         }
     }
 
-    private T Load<T>(string resourcesPath) where T : Object =>
-        Resources.Load<T>(Path.ChangeExtension(resourcesPath, null));
+    private T Load<T>(string resourcesPath) where T : Object => Resources.Load<T>(Path.ChangeExtension(resourcesPath, null));
 
 }
 

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimationScript : MonoBehaviour {
+public class AnimationScript : MonoBehaviour 
+{
 
     public bool isAnimated = false;
 
@@ -25,16 +26,8 @@ public class AnimationScript : MonoBehaviour {
     public float scaleRate;
     private float scaleTimer;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-       
-        
+	void Update () 
+    {
         if(isAnimated)
         {
             if(isRotating)

@@ -1,11 +1,4 @@
-﻿using Assets.Scripts.MVC.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assets.Scripts.MVC.Locations
+﻿namespace Assets.Scripts.MVC.Locations
 {
     class LocationInitialization : IInitialization
     {

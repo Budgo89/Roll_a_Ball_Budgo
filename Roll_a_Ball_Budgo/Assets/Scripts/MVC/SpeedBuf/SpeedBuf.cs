@@ -1,9 +1,6 @@
-﻿using Assets.Scripts.MVC.Canvass;
-using Assets.Scripts.MVC.Data;
-using Assets.Scripts.MVC.RollerBalls;
+﻿using Assets.Scripts.MVC.RollerBalls;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Vehicles.Ball;
@@ -48,6 +45,7 @@ public class SpeedBuf : MonoBehaviour, ISpeedBuf
             StartCoroutine(SpeedBufRoutine());        
         }
     }
+
     private IEnumerator SpeedBufRoutine()
     {
         yield return new WaitForSeconds(time);
@@ -75,6 +73,7 @@ public class SpeedBuf : MonoBehaviour, ISpeedBuf
         }
         _slider.gameObject.SetActive(false);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (_bufOn == false)

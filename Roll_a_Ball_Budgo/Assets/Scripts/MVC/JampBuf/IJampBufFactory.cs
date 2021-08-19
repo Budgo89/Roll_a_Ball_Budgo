@@ -1,9 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface IJampBufFactory
+﻿public interface IJampBufFactory
 {
      IJampBuf CreateJampBuf();
-
 }

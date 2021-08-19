@@ -1,12 +1,8 @@
-﻿using Assets.Scripts.MVC.Canvass;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpeedBufFactory : ISpeedBufFactory
 {
-    private readonly SpeedBufData _speedBufData;
-    
+    private readonly SpeedBufData _speedBufData;    
 
     public SpeedBufFactory(SpeedBufData speedBufData)
     {
