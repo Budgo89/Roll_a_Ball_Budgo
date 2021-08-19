@@ -1,7 +1,6 @@
 ﻿using Assets.Scripts.MVC.RollerBalls;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Vehicles.Ball;
@@ -34,6 +33,7 @@ public class JampBuf : MonoBehaviour, IJampBuf
             StartCoroutine(JampBufRoutine());
         }
     }
+
     private IEnumerator JampBufRoutine()
     {
         yield return new WaitForSeconds(_time);
@@ -41,6 +41,7 @@ public class JampBuf : MonoBehaviour, IJampBuf
         gameObject.SetActive(false);
         _bufOn = false;
     }
+
     private void TimeBuf()
     {
         _timer = _time;
@@ -60,6 +61,7 @@ public class JampBuf : MonoBehaviour, IJampBuf
         }
         _slider.gameObject.SetActive(false);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (_bufOn == false)

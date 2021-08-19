@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
-public class CanvasPoint /*: MonoBehaviour*/
+public class CanvasPoint
 {
     private GameObject[] _points;
     private int _point;

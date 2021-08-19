@@ -12,8 +12,6 @@ namespace Assets.Scripts.MVC.Saved
             PlayerPrefs.SetFloat("PosY", data.Position.Y);
             PlayerPrefs.SetFloat("PosZ", data.Position.Z);
             PlayerPrefs.SetString("IsEnable", data.IsEnabled.ToString());
-            // EditorPrefs.
-            //-----------------------------
             PlayerPrefs.Save();
         }
 

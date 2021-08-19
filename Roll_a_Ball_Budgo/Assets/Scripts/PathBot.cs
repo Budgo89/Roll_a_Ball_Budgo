@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using UnityEngine;
 
 namespace Assets.Scripts
 {
-	public class PathBot : MonoBehaviour
+    public class PathBot : MonoBehaviour
 	{
 		[SerializeField]
 		private Color _lineColor = Color.red;
@@ -15,7 +11,6 @@ namespace Assets.Scripts
 		private Color _sphereColor = Color.green;
 		[SerializeField, Range(0.1f, 5.0f)] private float _radius = 0.5f;
 
-		// OnDrawGizmosSelected()
 		private void OnDrawGizmos()
 		{
 			var nodes = GetComponentsInChildren<Transform>().Skip(1).

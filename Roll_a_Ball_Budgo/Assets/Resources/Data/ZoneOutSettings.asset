@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ZoneOutSettings
   m_EditorClassIdentifier: 
   _zoneOutInfo:
-  - ZoneOutPrefab: {fileID: 5940050571533198426, guid: e75ee2ec2b5757749bc6156cf731e983,
+  - zoneOutPrefab: {fileID: 5940050571533198426, guid: e75ee2ec2b5757749bc6156cf731e983,
       type: 3}
     _position: {x: 0, y: 0, z: 0}

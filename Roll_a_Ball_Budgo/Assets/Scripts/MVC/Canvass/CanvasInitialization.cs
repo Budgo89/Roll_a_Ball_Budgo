@@ -1,18 +1,10 @@
-﻿
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-
-namespace Assets.Scripts.MVC.Canvass
+﻿namespace Assets.Scripts.MVC.Canvass
 {
     class CanvasInitialization : IInitialization
     {
         private readonly ICanvasFactory _canvasFactory;
         private CanvasInterface _canvasInterface;
         private CanvasManager _canvasManager;
-        //public List<ICanvasInterface> canvasManager = new List<ICanvasInterface>();
         private CanvasModel canvasModel;
 
         public CanvasInitialization(ICanvasFactory canvasFactory, CanvasManager canvasManager)

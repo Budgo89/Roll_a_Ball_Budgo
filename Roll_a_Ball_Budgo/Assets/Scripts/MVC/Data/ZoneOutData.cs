@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace Assets.Scripts.MVC.Data
@@ -13,14 +11,14 @@ namespace Assets.Scripts.MVC.Data
         [Serializable]
         private struct ZoneOutInfo
         {
-            public ZoneOut ZoneOutPrefab;
+            public ZoneOut zoneOutPrefab;
             public Vector3Int _position;
         }
         [SerializeField] private List<ZoneOutInfo> _zoneOutInfo;
         public ZoneOut GetZoneOut()
         {
             var zoneOutInfo = _zoneOutInfo.First();
-            return zoneOutInfo.ZoneOutPrefab;
+            return zoneOutInfo.zoneOutPrefab;
         }
         public Vector3 GetZoneOutPosition()
         {
